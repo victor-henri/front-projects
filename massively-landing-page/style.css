@@ -15,6 +15,16 @@
   display: block;
 }
 
+.dotted {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  text-underline-offset: 0.3rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* ----[CONTAINER]---- */
 .container {
   margin: 0;
@@ -75,12 +85,15 @@
 }
 .header .info__desc--dec {
   font-size: 1.1rem;
-  font-style: italic;
+  font-style: oblique 15deg;
+  font-weight: bold;
   font-family: "Merriweather";
   line-height: 2.5rem;
 }
 .header .info__button {
-  padding: 1rem 1.2rem;
+  padding: 1.8rem 1.4rem;
+  -webkit-margin-before: 1.5rem;
+          margin-block-start: 1.5rem;
 }
 .header .info__button--dec {
   color: #ffffff;
@@ -102,6 +115,8 @@
 }
 .header .nav-dt--dec {
   background-color: rgba(113, 121, 129, 0.4);
+  border-top-left-radius: 12px 12px;
+  border-top-right-radius: 12px 12px;
 }
 .header .nav-dt .nav-lt {
   flex: 6;
@@ -113,13 +128,22 @@
   display: none;
 }
 .header .nav-dt .nav-lt__link {
-  width: 25%;
+  width: auto;
+  padding: 0.5rem 1.5rem;
 }
 .header .nav-dt .nav-lt__link--dec {
   text-decoration: none;
   font-family: "SourceSans";
+  letter-spacing: 0.02rem;
   font-size: 1rem;
   color: #ffffff;
+}
+.header .nav-dt .nav-lt__link:hover {
+  background-color: #ffffff;
+  color: #1e252d;
+  transition: 0.5s ease;
+  border-top-left-radius: 12px 12px;
+  border-top-right-radius: 12px 12px;
 }
 .header .nav-dt .nav-rt {
   flex: 1;
@@ -274,6 +298,7 @@
 }
 .main .articles .post__button--dec {
   font-family: "SourceSans";
+  font-size: 0.9rem;
   text-decoration: none;
   color: #1e252d;
   border-width: 2px;
@@ -325,6 +350,10 @@
   letter-spacing: 0.1rem;
   color: #1e252d;
 }
+.main .pages__button:hover {
+  background-color: #eeeeee;
+  transition: 0.7s ease;
+}
 .main .pages__button:last-child {
   border-right: 2px solid #eeeeee;
 }
@@ -336,7 +365,6 @@
   max-width: 75%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 0.5fr;
   grid-template-areas: "form info" "credits credits";
 }
 .footer--dec {
@@ -358,7 +386,7 @@
 .footer .form__title--dec {
   font-family: "SourceSans";
   color: #717981;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .footer .form__input {
   width: 100%;
@@ -409,7 +437,7 @@
   margin-right: 2rem;
   font-family: "SourceSans";
   color: #717981;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .footer .info-sc__desc {
   margin: 0;
@@ -417,7 +445,7 @@
 .footer .info-sc__desc--dec {
   font-family: "Merriweather";
   color: #717981;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: left;
 }
 .footer .info-sc .address__desc {
@@ -426,7 +454,7 @@
 .footer .info-sc .address__desc--dec {
   font-family: "Merriweather";
   color: #717981;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: left;
 }
 .footer .info-sc .social__icon {
@@ -441,12 +469,13 @@
   border-radius: 50%;
 }
 .footer .credits {
+  padding: 4rem 0;
   width: 100%;
   grid-area: credits;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .footer .credits--dec {
   background-color: #1e252d;
@@ -487,18 +516,18 @@
     position: relative;
   }
   .header .info__title--dec {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
+    font-size: 3rem;
+    line-height: 3rem;
   }
   .header .info__title > .span {
     display: block;
   }
   .header .info__desc {
-    -webkit-margin-after: 5rem;
-            margin-block-end: 5rem;
+    -webkit-margin-after: 6rem;
+            margin-block-end: 6rem;
   }
   .header .info__desc--dec {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 2rem;
   }
   .header .info__button {
@@ -524,6 +553,8 @@
   .header .nav-dt--dec {
     background-color: #ffffff;
     box-shadow: -10px 0px 50rem black;
+    border-top-right-radius: initial;
+    border-top-left-radius: initial;
   }
   .header .nav-dt .nav-lt {
     flex: 1;
@@ -551,9 +582,11 @@
     transform: translate(-50%, -50%) rotate(-45deg);
   }
   .header .nav-dt .nav-lt .exit__bar--dec {
+    background-color: #717981;
     border-color: #717981;
     border-width: 2px;
     border-style: solid;
+    border-radius: 2px;
   }
   .header .nav-dt .nav-lt__link {
     width: initial;
@@ -686,6 +719,7 @@
   }
   .footer .credits {
     flex-direction: column;
+    align-items: center;
   }
   .footer .credits__desc {
     padding: 0;

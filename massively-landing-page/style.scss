@@ -25,8 +25,19 @@ $gray: #909498;
 $grayTwo: #717981;
 $contentSize: 75%;
 
+// Break lines in titles and descriptions
 .span {
     display: block;
+}
+
+// Dotted texts in header and footer
+.dotted {
+    text-decoration: underline dotted;
+    text-underline-offset: 0.3rem;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* ----[CONTAINER]---- */
@@ -100,17 +111,18 @@ $contentSize: 75%;
         }
 
         &__desc {
-
             &--dec {
                 font-size: 1.1rem;
-                font-style: italic;
+                font-style: oblique 15deg;
+                font-weight: bold;
                 font-family: 'Merriweather';
                 line-height: 2.5rem;
             }
         }
 
         &__button {
-            padding: 1rem 1.2rem;
+            padding: 1.8rem 1.4rem;
+            margin-block-start: 1.5rem;
             
             &--dec {
                 color: $white;
@@ -135,6 +147,8 @@ $contentSize: 75%;
 
         &--dec {
             background-color: rgba($color: $grayTwo, $alpha: 0.4);
+            border-top-left-radius: 12px 12px;
+            border-top-right-radius: 12px 12px;
         }
 
         .nav-lt {
@@ -148,16 +162,30 @@ $contentSize: 75%;
             }
             
             &__link {
-                width: 25%;
+                width: auto;
+                padding: 0.5rem 1.5rem;
+
+                // &:first-child {
+                //     background-color: $white;
+                //     color: $blueTwo;
+                // }
 
                 &--dec {
                     text-decoration: none;
                     font-family: 'SourceSans';
+                    letter-spacing: 0.02rem;
                     font-size: 1rem;
                     color: $white;
                 }
+
+                &:hover {
+                    background-color: $white;
+                    color: $blueTwo;
+                    transition: 0.5s ease;
+                    border-top-left-radius: 12px 12px;
+                    border-top-right-radius: 12px 12px;
+                }
             }
-            
         }
 
         .nav-rt {
@@ -171,7 +199,6 @@ $contentSize: 75%;
                 width: 100%;
                 padding: 0 5px;
                 
-
                 &--dec {
                     color: $white;
                 }
@@ -211,7 +238,6 @@ $contentSize: 75%;
         }
 
         &__date {
-
             &--dec {
                 width: 100%;
                 color: $blueTwo;
@@ -239,6 +265,7 @@ $contentSize: 75%;
             }
 
         }
+
         &__title {
             margin-block-end: 0.5em;
 
@@ -249,6 +276,7 @@ $contentSize: 75%;
                 line-height: 4rem;
             }
         }
+
         &__desc {
             margin-block-end: 4em;
 
@@ -264,6 +292,7 @@ $contentSize: 75%;
             width: 100%;
             margin-block-end: 4em;
         }
+
         &__button {
             padding: 18px 0;
             width: 175px;
@@ -315,6 +344,7 @@ $contentSize: 75%;
                     font-size: 0.8rem;
                 }
             }
+
             &__title {
                 &--dec {
                     font-family: 'SourceSans';
@@ -322,9 +352,11 @@ $contentSize: 75%;
                     color: $blue;
                 }
             }
+
             &__img {
                 margin-block-end: 2em;
             }
+
             &__desc {
                 margin-block-end: 2em;
                 
@@ -334,12 +366,14 @@ $contentSize: 75%;
                     text-align: left;
                 }
             }
+
             &__button {
                 padding: 16px 0;
                 width: 150px;
 
                 &--dec {
                     font-family: 'SourceSans';
+                    font-size: 0.9rem;
                     text-decoration: none;
                     color: $blueTwo;
                     border-width: 2px;
@@ -351,18 +385,23 @@ $contentSize: 75%;
             &--first{
                 grid-area: first;
             }
+
             &--second{
                 grid-area: second;
             }
+
             &--third{
                 grid-area: third;
             }
+
             &--fourth{
                 grid-area: fourth;
             }
+
             &--fifth{
                 grid-area: fifth;
             }
+
             &--sixth{
                 grid-area: sixth;
             }
@@ -387,7 +426,7 @@ $contentSize: 75%;
 
         &__button {
             padding: 1rem 1.25rem;
-
+            
             &--dec {
                 background-color: $white;
                 border-width: 2px;
@@ -397,6 +436,11 @@ $contentSize: 75%;
                 font-family: 'SourceSans';
                 letter-spacing: 0.1rem;
                 color: $blueTwo;
+            }
+
+            &:hover {
+                background-color: $whiteThree;
+                transition: 0.7s ease;
             }
 
             &:last-child {
@@ -414,7 +458,7 @@ $contentSize: 75%;
     max-width: $contentSize;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 0.5fr;
+    
     grid-template-areas:
     "form info"
     "credits credits";
@@ -438,7 +482,7 @@ $contentSize: 75%;
             &--dec {
                 font-family: 'SourceSans';
                 color: $grayTwo;
-                font-size: 1rem;
+                font-size: 0.8rem;
             }
         }
 
@@ -477,7 +521,6 @@ $contentSize: 75%;
         justify-items: center;
         box-sizing: border-box;
         
-
         &-sc {
             flex: 1;
             display: flex;
@@ -497,14 +540,15 @@ $contentSize: 75%;
                 margin-right: 2rem;
                 font-family: 'SourceSans';
                 color: $grayTwo;
-                font-size: 1rem;
+                font-size: 0.8rem;
             }
+
             &__desc {
                 margin: 0;
                 &--dec {
                     font-family: 'Merriweather';
                     color: $grayTwo;
-                    font-size: 1rem;
+                    font-size: 0.8rem;
                     text-align: left;
                 }
             }
@@ -515,7 +559,7 @@ $contentSize: 75%;
                     &--dec {
                         font-family: 'Merriweather';
                         color: $grayTwo;
-                        font-size: 1rem;
+                        font-size: 0.8rem;
                         text-align: left;
                     }
                 }
@@ -539,12 +583,13 @@ $contentSize: 75%;
     }
 
     .credits {
+        padding: 4rem 0;
         width: 100%;
         grid-area: credits;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
 
         &--dec {
             background-color: $blueTwo;
@@ -595,10 +640,9 @@ $contentSize: 75%;
             position: relative;
 
             &__title {
-
                 &--dec {
-                    font-size: 3.5rem;
-                    line-height: 3.5rem;
+                    font-size: 3rem;
+                    line-height: 3rem;
                 }
 
                 > .span {
@@ -607,9 +651,10 @@ $contentSize: 75%;
             }
 
             &__desc {
-                margin-block-end: 5rem;
+                margin-block-end: 6rem;
+
                 &--dec {
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                     line-height: 2rem;
                 }
             }
@@ -639,6 +684,8 @@ $contentSize: 75%;
             &--dec {
                 background-color: $white;
                 box-shadow: -10px 0px 50rem black;
+                border-top-right-radius: initial;
+                border-top-left-radius: initial;
             }
 
             .nav-lt{
@@ -669,9 +716,11 @@ $contentSize: 75%;
                         }
 
                         &--dec {
+                            background-color: $grayTwo;
                             border-color: $grayTwo;
                             border-width: 2px;
                             border-style: solid;
+                            border-radius: 2px;
                         }
                     }
                 }
@@ -763,6 +812,7 @@ $contentSize: 75%;
 
         .main-pt {
             padding: 4rem 2rem;
+
             &__date {
                 &::before,
                 &::after {
@@ -857,6 +907,7 @@ $contentSize: 75%;
 
         .credits {
             flex-direction: column;
+            align-items: center;
 
             &__desc {
                 padding: 0;
