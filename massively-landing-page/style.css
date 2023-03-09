@@ -1,4 +1,4 @@
-/* ----This CSS File follows BEM methodology---- */
+/* ----This SCSS File follows BEM methodology---- */
 @font-face {
   font-family: "SourceSans";
   src: url(./assets/fonts/SourceSansPro-Black.ttf) format("truetype");
@@ -108,6 +108,9 @@
   display: flex;
   flex-direction: row;
   justify-content: start;
+}
+.header .nav-dt .nav-lt .exit {
+  display: none;
 }
 .header .nav-dt .nav-lt__link {
   width: 25%;
@@ -491,8 +494,8 @@
     display: block;
   }
   .header .info__desc {
-    -webkit-margin-after: 3rem;
-            margin-block-end: 3rem;
+    -webkit-margin-after: 5rem;
+            margin-block-end: 5rem;
   }
   .header .info__desc--dec {
     font-size: 1rem;
@@ -503,6 +506,91 @@
   }
   .header .nav-dt {
     display: none;
+    max-height: initial;
+    transform: initial;
+    bottom: initial;
+    left: initial;
+    height: 100vh;
+    width: 70%;
+    z-index: 3;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+    box-sizing: border-box;
+    right: 0;
+    top: 0;
+  }
+  .header .nav-dt--dec {
+    background-color: #ffffff;
+    box-shadow: -10px 0px 50rem black;
+  }
+  .header .nav-dt .nav-lt {
+    flex: 1;
+    flex-direction: column;
+  }
+  .header .nav-dt .nav-lt .exit {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 18px;
+    height: 18px;
+  }
+  .header .nav-dt .nav-lt .exit__bar {
+    position: absolute;
+    width: 100%;
+    margin-bottom: 1px;
+    top: 50%;
+    left: 50%;
+  }
+  .header .nav-dt .nav-lt .exit__bar:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .header .nav-dt .nav-lt .exit__bar:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .header .nav-dt .nav-lt .exit__bar--dec {
+    border-color: #717981;
+    border-width: 2px;
+    border-style: solid;
+  }
+  .header .nav-dt .nav-lt__link {
+    width: initial;
+    padding-left: 0.5rem;
+  }
+  .header .nav-dt .nav-lt__link--dec {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    color: #1e252d;
+    text-align: left;
+    border: 0;
+    border-bottom: 2px;
+    border-style: solid;
+    border-color: #eeeeee;
+  }
+  .header .nav-dt .nav-lt__link--dec:last-child {
+    border-bottom: 0;
+  }
+  .header .nav-dt .nav-rt {
+    flex: 9;
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+  .header .nav-dt .nav-rt__icon {
+    width: initial;
+    padding: 18px 10px;
+    margin-right: 0.5rem;
+  }
+  .header .nav-dt .nav-rt__icon:nth-child(2) {
+    padding: 18px 14px;
+  }
+  .header .nav-dt .nav-rt__icon--dec {
+    color: #1e252d;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #eeeeee;
+    border-radius: 50%;
   }
   .header .nav-mb {
     display: flex;

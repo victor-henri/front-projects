@@ -1,5 +1,5 @@
 
-/* ----This CSS File follows BEM methodology---- */
+/* ----This SCSS File follows BEM methodology---- */
 
 @font-face {
     font-family: 'SourceSans';
@@ -142,6 +142,10 @@ $contentSize: 75%;
             display: flex;
             flex-direction: row;
             justify-content: start;
+
+            .exit {
+                display: none;
+            }
             
             &__link {
                 width: 25%;
@@ -603,7 +607,7 @@ $contentSize: 75%;
             }
 
             &__desc {
-                margin-block-end: 3rem;
+                margin-block-end: 5rem;
                 &--dec {
                     font-size: 1rem;
                     line-height: 2rem;
@@ -617,6 +621,105 @@ $contentSize: 75%;
 
         .nav-dt {
             display: none;
+            max-height: initial;
+            transform: initial;
+            bottom: initial;
+            left: initial;
+            height: 100vh;
+            width: 70%;
+            z-index: 3;
+            position: absolute;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 1rem;
+            box-sizing: border-box;
+            right: 0;
+            top: 0;
+
+            &--dec {
+                background-color: $white;
+                box-shadow: -10px 0px 50rem black;
+            }
+
+            .nav-lt{
+                flex: 1;
+                flex-direction: column;
+            
+                .exit {
+                    margin-left: auto;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    width: 18px;
+                    height: 18px;
+
+                    &__bar {
+                        position: absolute;
+                        width: 100%;
+                        margin-bottom: 1px;
+                        top: 50%;
+                        left: 50%;
+
+                        &:first-child {
+                            transform: translate(-50%, -50%) rotate(45deg);
+                        }
+
+                        &:last-child {
+                            transform: translate(-50%, -50%) rotate(-45deg);
+                        }
+
+                        &--dec {
+                            border-color: $grayTwo;
+                            border-width: 2px;
+                            border-style: solid;
+                        }
+                    }
+                }
+
+                &__link {
+                    width: initial;
+                    padding-left: 0.5rem;
+
+                    &--dec {
+                        font-size: 0.9rem;
+                        letter-spacing: 0.05rem;
+                        color: $blueTwo;
+                        text-align: left;
+                        border: 0;
+                        border-bottom: 2px;
+                        border-style: solid;
+                        border-color: $whiteThree;
+
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .nav-rt {
+                flex: 9;
+                align-items: flex-start;
+                padding-top: 2rem;
+
+                &__icon {
+                    width: initial;
+                    padding: 18px 10px;
+                    margin-right: 0.5rem;
+
+                    &:nth-child(2) {
+                        padding: 18px 14px;
+                    }
+
+                    &--dec {
+                        color: $blueTwo;
+                        border-width: 2px;
+                        border-style: solid;
+                        border-color: $whiteThree;
+                        border-radius: 50%;
+                    }
+                }
+            }
         }
 
         .nav-mb {
