@@ -1,7 +1,7 @@
 .container {
   margin: 0;
   height: 100vh;
-  width: auto;
+  width: 100%;
   background-color: #001220;
   position: relative;
 }
@@ -13,6 +13,7 @@
 .container .layer-motion .begin {
   height: 100%;
   width: 100%;
+  translate: -1% -15%;
 }
 .container .layer-motion .end {
   height: 100%;
