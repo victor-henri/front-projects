@@ -10,11 +10,11 @@
   width: 100%;
   left: 0;
 }
-.container .layer-motion .ly-one {
+.container .layer-motion .begin {
   height: 100%;
   width: 100%;
 }
-.container .layer-motion .ly-two {
+.container .layer-motion .end {
   height: 100%;
   width: 100%;
   visibility: hidden;
