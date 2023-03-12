@@ -1,0 +1,21 @@
+.container {
+  margin: 0;
+  height: 100vh;
+  width: auto;
+  background-color: #001220;
+  position: relative;
+}
+.container .layer-motion {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.container .layer-motion .ly-one {
+  height: 100%;
+  width: 100%;
+}
+.container .layer-motion .ly-two {
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+}/*# sourceMappingURL=style.css.map */
