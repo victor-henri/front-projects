@@ -262,6 +262,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 5rem;
   box-sizing: border-box;
 }
@@ -274,8 +275,16 @@ html {
   font-family: "Merriweather";
   font-size: 0.8rem;
 }
+.main .articles .post__title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .main .articles .post__title--dec {
   font-family: "SourceSans";
+  text-transform: uppercase;
   font-size: 2rem;
   color: #212931;
 }
@@ -284,6 +293,11 @@ html {
           margin-block-end: 2em;
 }
 .main .articles .post__desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
   -webkit-margin-after: 2em;
           margin-block-end: 2em;
 }
@@ -291,6 +305,9 @@ html {
   font-family: "Merriweather";
   line-height: 2.5rem;
   text-align: left;
+}
+.main .articles .post__desc--dec::first-letter {
+  text-transform: capitalize;
 }
 .main .articles .post__button {
   padding: 16px 0;
@@ -305,22 +322,22 @@ html {
   border-style: solid;
   border-color: #1e252d;
 }
-.main .articles .post--first {
+.main .articles .post--1 {
   grid-area: first;
 }
-.main .articles .post--second {
+.main .articles .post--2 {
   grid-area: second;
 }
-.main .articles .post--third {
+.main .articles .post--3 {
   grid-area: third;
 }
-.main .articles .post--fourth {
+.main .articles .post--4 {
   grid-area: fourth;
 }
-.main .articles .post--fifth {
+.main .articles .post--5 {
   grid-area: fifth;
 }
-.main .articles .post--sixth {
+.main .articles .post--6 {
   grid-area: sixth;
 }
 .main .articles .post__img {

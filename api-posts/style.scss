@@ -15,6 +15,22 @@
     font-style: normal;
 }
 
+// Para manter o aspecto estético do design original, optei por limitar 
+// neste exemplo as linhas de título e descrição dos posts secundários.
+// A idéia inicial do projeto era apenas para demonstrar um design responsível, 
+// mas após ganhar um pouco de conhecimento em consumo de API com Promises, 
+// vi que seria uma boa oportunidade de criar algumas modificações para integrar.
+// Esta parte pode ser melhorada e será feita futuramente, conforme eu adquirir 
+// mais conhecimento.
+
+@mixin limit-lines($lines) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 $blue: #212931;
 $blueTwo: #1e252d;
 $white: #ffffff;
@@ -25,12 +41,12 @@ $gray: #909498;
 $grayTwo: #717981;
 $contentSize: 75%;
 
-// Break lines in titles and descriptions
+// Quebra linhas nos titulos e descrições
 .span {
     display: block;
 }
 
-// Dotted texts in header and footer
+// Textos marcados no header e no footer
 .dotted {
     text-decoration: underline dotted;
     text-underline-offset: 0.3rem;
@@ -164,11 +180,6 @@ html {
             &__link {
                 width: auto;
                 padding: 0.5rem 1.5rem;
-
-                // &:first-child {
-                //     background-color: $white;
-                //     color: $blueTwo;
-                // }
 
                 &--dec {
                     text-decoration: none;
@@ -329,6 +340,7 @@ html {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             padding: 5rem;
             box-sizing: border-box;
 
@@ -346,8 +358,11 @@ html {
             }
 
             &__title {
+                @include limit-lines(1);
+
                 &--dec {
                     font-family: 'SourceSans';
+                    text-transform: uppercase;
                     font-size: 2rem;
                     color: $blue;
                 }
@@ -358,12 +373,17 @@ html {
             }
 
             &__desc {
+                @include limit-lines(2);
                 margin-block-end: 2em;
                 
                 &--dec {
                     font-family: 'Merriweather';
                     line-height: 2.5rem;
                     text-align: left;
+                    
+                    &::first-letter {
+                        text-transform: capitalize;
+                    }
                 }
             }
 
@@ -382,27 +402,27 @@ html {
                 }
             }
 
-            &--first{
+            &--1{
                 grid-area: first;
             }
 
-            &--second{
+            &--2{
                 grid-area: second;
             }
 
-            &--third{
+            &--3{
                 grid-area: third;
             }
 
-            &--fourth{
+            &--4{
                 grid-area: fourth;
             }
 
-            &--fifth{
+            &--5{
                 grid-area: fifth;
             }
 
-            &--sixth{
+            &--6{
                 grid-area: sixth;
             }
 
