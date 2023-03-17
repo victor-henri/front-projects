@@ -1,7 +1,11 @@
-# Email Landing Page
+# **Email Landing Page**
 
-Uma página simples, mínima e responsível construída em HTML5 e CSS3 para coletar endereços de e-mail.
+ - Uma página simples, mínima e responsível construída em HTML5 e CSS3 para coletar endereços de e-mail.
 
-A simple, minimal and responsive landing page built in HTML5 and CSS3 to collect email addresses.
+    [Clique aqui para acessar a página](https://victor-henri.github.io/front-projects/email-landing-page/)
 
-[Clique aqui para acessar a página](https://victor-henri.github.io/layout-challenges/email-landing-page/)
+<br><br>
+
+ - A simple, minimal and responsive landing page built in HTML5 and CSS3 to collect email addresses.
+
+    [Click here to access the page](https://victor-henri.github.io/front-projects/email-landing-page/)
